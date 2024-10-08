@@ -95,10 +95,10 @@ El frontend estará disponible en http://localhost:3000.
 Ejecutar ambos servicios simultáneamente
 
 El backend se ejecutará en: 
-    [http://localhost:8080].
+    http://localhost:8080.
 
 El frontend se ejecutará en: 
-    [http://localhost:3000].
+    http://localhost:3000.
 
 El frontend está configurado para hacer peticiones al backend alojado en http://localhost:8080. Si todo está configurado correctamente, deberías poder usar la aplicación desde el frontend, conectándose al backend.
 
