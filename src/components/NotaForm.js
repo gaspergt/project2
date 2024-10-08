@@ -47,7 +47,6 @@ const NotaForm = () => {
       navigate('/');
     } catch (error) {
       if (error.response && error.response.data && error.response.data.length > 0) {
-        // Extraer los mensajes de error de validación desde el servidor y mostrarlos en SweetAlert
         const errorMsg = error.response.data
           .map(err => `${err.defaultMessage}`)
           .join(', ');
@@ -57,14 +56,12 @@ const NotaForm = () => {
           text: errorMsg,
         });
       } else if (error.request) {
-        // Si no hay respuesta del servidor
         Swal.fire({
           icon: 'error',
           title: 'Error de red:',
           text: 'No se pudo conectar con el servidor.',
         });
       } else {
-        // Otros errores
         Swal.fire({
           icon: 'error',
           title: 'Error desconocido:',

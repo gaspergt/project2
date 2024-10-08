@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="container">
       <h1 className="text-center mt-4">Gestión de Notas</h1>
-      <Routes>  {/* Utiliza Routes para gestionar las rutas */}
+      <Routes>  {}
         <Route path="/" element={<NotaList />} />
         <Route path="/add" element={<NotaForm />} />
         <Route path="/edit/:id" element={<NotaForm />} />
