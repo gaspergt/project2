@@ -61,7 +61,7 @@ Dentro de la carpeta backend, ejecuta los siguientes comandos para descargar las
 mvn clean install
 mvn spring-boot:run
 ```
-El servidor backend debería estar disponible en http://localhost:8080[(http://localhost:8080)].
+El servidor backend debería estar disponible en [(http://localhost:8080)].
 
 ### Configuración del Frontend
 
@@ -94,18 +94,19 @@ El frontend estará disponible en [http://localhost:3000].
 
 Ejecutar ambos servicios simultáneamente
 
-    El backend se ejecutará en [http://localhost:8080].
-    El frontend se ejecutará en [http://localhost:3000].
+El backend se ejecutará en: 
+    [http://localhost:8080].
+
+El frontend se ejecutará en: 
+    [http://localhost:3000].
 
 El frontend está configurado para hacer peticiones al backend alojado en http://localhost:8080. Si todo está configurado correctamente, deberías poder usar la aplicación desde el frontend, conectándose al backend.
 
-Notas adicionales
+> [!IMPORTANT] Notas adicionales
+>Si necesitas reiniciar la base de datos en algún momento, puedes volver a importar el archivo database_dump.sql en MySQL.
+>Asegúrate de que ambos servidores (frontend y backend) estén corriendo simultáneamente para poder acceder a la funcionalidad completa de la aplicación.
+>Puedes usar herramientas como Postman para probar los endpoints del backend.
 
-    Si necesitas reiniciar la base de datos en algún momento, puedes volver a importar el archivo database_dump.sql en MySQL.
-    Asegúrate de que ambos servidores (frontend y backend) estén corriendo simultáneamente para poder acceder a la funcionalidad completa de la aplicación.
-    Puedes usar herramientas como Postman para probar los endpoints del backend.
-
-Solución de problemas
-
-    Errores con la base de datos: Verifica que el servidor de MySQL esté ejecutándose y que las credenciales en application.properties sean correctas.
-    Problemas con CORS: Si hay problemas de CORS, asegúrate de que el backend tenga configurado correctamente el soporte de CORS en el archivo WebConfig.java.
+### Solución de problemas
+Errores con la base de datos: Verifica que el servidor de MySQL esté ejecutándose y que las credenciales en application.properties sean correctas.
+Problemas con CORS: Si hay problemas de CORS, asegúrate de que el backend tenga configurado correctamente el soporte de CORS en el archivo WebConfig.java.
