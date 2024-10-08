@@ -30,31 +30,30 @@ Cambiar a la rama del backend:
 git checkout backend
 ```
 
-Configurar la base de datos:
+### Configurar la base de datos:
 
 El dump de la base de datos se encuentra en la carpeta del backend bajo el archivo database_dump.sql.
+Crea una base de datos en MySQL:
 
-    Crea una base de datos en MySQL:
-
-    ```sql
-    CREATE DATABASE gestion_notas;
-    ```
+```sql
+CREATE DATABASE gestion_notas;
+```
 
 Importa el dump:
 
-    ```bash
-    mysql -u <usuario> -p gestion_notas < ruta/al/archivo/database_dump.sql
-    ```
+```bash
+mysql -u <usuario> -p gestion_notas < ruta/al/archivo/database_dump.sql
+```
 
-Configurar las credenciales de MySQL:
+### Configurar las credenciales de MySQL:
 
 Abre el archivo src/main/resources/application.properties o application.yml y ajusta las credenciales de conexión a tu base de datos MySQL.
 
-    ```properties
-    spring.datasource.url=jdbc:mysql://localhost:3306/gestion_notas
-    spring.datasource.username=tu_usuario
-    spring.datasource.password=tu_contraseña
-    ```
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/gestion_notas
+spring.datasource.username=tu_usuario
+spring.datasource.password=tu_contraseña
+```
 
 Compilar y ejecutar el backend:
 
