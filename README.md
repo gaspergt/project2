@@ -61,46 +61,41 @@ Dentro de la carpeta backend, ejecuta los siguientes comandos para descargar las
 mvn clean install
 mvn spring-boot:run
 ```
-[El servidor backend debería estar disponible en http://localhost:8080](http://localhost:8080).
+El servidor backend debería estar disponible en http://localhost:8080[(http://localhost:8080)].
 
-Configuración del Frontend
+### Configuración del Frontend
 
-    Cambiar a la rama del frontend:
+Cambiar a la rama del frontend:
 
-    ```bash
-    git checkout frontend
-    ```
-
-Instalar las dependencias de npm:
+```bash
+git checkout frontend
+```
 
 Dentro de la carpeta del frontend, ejecuta el siguiente comando para instalar las dependencias:
 
-    ```bash
-    npm install
-    ```
+```bash
+npm install
+```
 
-Configurar la API del backend:
+### Configurar la API del backend:
 
 Si es necesario, ajusta la URL de la API del backend en el archivo src/config.js o en el archivo correspondiente donde configures el endpoint de la API:
 
-    ```javascript
-    const API_URL = 'http://localhost:8080/api'; // Ajusta la URL si es necesario
-    ```
-
-Ejecutar el frontend:
+```javascript
+const API_URL = 'http://localhost:8080/api'; // Ajusta la URL si es necesario
+```
 
 Después de instalar las dependencias, ejecuta el siguiente comando para arrancar el servidor de desarrollo:
 
-    ```bash
-    npm start
-    ```
-
-    El frontend estará disponible en http://localhost:3000.
+```bash
+npm start
+```
+El frontend estará disponible en [http://localhost:3000].
 
 Ejecutar ambos servicios simultáneamente
 
-    El backend se ejecutará en http://localhost:8080.
-    El frontend se ejecutará en http://localhost:3000.
+    El backend se ejecutará en [http://localhost:8080].
+    El frontend se ejecutará en [http://localhost:3000].
 
 El frontend está configurado para hacer peticiones al backend alojado en http://localhost:8080. Si todo está configurado correctamente, deberías poder usar la aplicación desde el frontend, conectándose al backend.
 
