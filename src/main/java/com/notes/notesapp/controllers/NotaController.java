@@ -20,35 +20,29 @@ public class NotaController {
     @Autowired
     private NotaRepository notaRepository;
 
-    // Obtener todas las notas
     @GetMapping
     public List<Nota> getAllNotas() {
         return notaRepository.findAll();
     }
 
-    // Crear una nueva nota con validación
     @PostMapping
     public ResponseEntity<?> createNota(@Valid @RequestBody Nota nota, BindingResult result) {
         if (result.hasErrors()) {
-            // Devolver los errores de validación
             return ResponseEntity.badRequest().body(result.getAllErrors());
         }
 
-        // Calcular el total antes de guardar
         nota.calcularTotal();
 
         Nota savedNota = notaRepository.save(nota);
         return ResponseEntity.ok(savedNota);
     }
 
-    // Obtener una nota por ID
     @GetMapping("/{id}")
     public ResponseEntity<Nota> getNotaById(@PathVariable Long id) {
         Optional<Nota> nota = notaRepository.findById(id);
         return nota.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Actualizar una nota existente con validación
     @PutMapping("/{id}")
     public ResponseEntity<?> updateNota(@PathVariable Long id, @Valid @RequestBody Nota notaDetails,
             BindingResult result) {
@@ -65,7 +59,6 @@ public class NotaController {
             notaToUpdate.setSegundoParcial(notaDetails.getSegundoParcial());
             notaToUpdate.setExamenFinal(notaDetails.getExamenFinal());
 
-            // Calcular el total antes de actualizar
             notaToUpdate.calcularTotal();
 
             Nota updatedNota = notaRepository.save(notaToUpdate);
@@ -75,7 +68,6 @@ public class NotaController {
         }
     }
 
-    // Eliminar una nota
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteNota(@PathVariable Long id) {
         if (notaRepository.existsById(id)) {

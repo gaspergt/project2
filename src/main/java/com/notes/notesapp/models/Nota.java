@@ -35,12 +35,10 @@ public class Nota {
 
     private Double total;
 
-    // Método para calcular el total
     public void calcularTotal() {
         this.total = this.actividades + this.primerParcial + this.segundoParcial + this.examenFinal;
     }
 
-    // Getters y Setters
     public Long getId() {
         return id;
     }
