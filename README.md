@@ -22,13 +22,13 @@ Primero, clona el repositorio. Este contiene dos ramas: `backend` para el backen
 git clone <URL_DEL_REPOSITORIO>
 ```
 
-Configuración del Backend
+###Configuración del Backend
 
-    Cambiar a la rama del backend:
+##Cambiar a la rama del backend:
 
-    ```bash
-    git checkout backend
-    ```
+```bash
+git checkout backend
+```
 
 Configurar la base de datos:
 
