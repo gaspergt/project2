@@ -1,0 +1,5 @@
+com/notes/notesapp/WebConfig.class
+com/notes/notesapp/NotesappApplication.class
+com/notes/notesapp/repositories/NotaRepository.class
+com/notes/notesapp/controllers/NotaController.class
+com/notes/notesapp/models/Nota.class
