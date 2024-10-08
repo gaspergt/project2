@@ -24,7 +24,7 @@ git clone <URL_DEL_REPOSITORIO>
 
 ### Configuración del Backend
 
-## Cambiar a la rama del backend:
+Cambiar a la rama del backend:
 
 ```bash
 git checkout backend
