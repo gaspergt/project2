@@ -19,7 +19,7 @@ Asegúrate de tener instaladas las siguientes herramientas:
 Primero, clona el repositorio. Este contiene dos ramas: `backend` para el backend con Spring Boot y `frontend` para la parte de React.
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/gaspergt/project2.git
 ```
 
 ### Configuración del Backend
@@ -32,7 +32,7 @@ git checkout backend
 
 ### Configurar la base de datos:
 
-El dump de la base de datos se encuentra en la carpeta del backend bajo el archivo database_dump.sql.
+El dump de la base de datos se encuentra en la carpeta del backend bajo el archivo `database_dump.sql`.
 Crea una base de datos en MySQL:
 
 ```sql
@@ -45,7 +45,7 @@ Importa el dump:
 mysql -u <usuario> -p gestion_notas < ruta/al/archivo/database_dump.sql
 ```
 
-Abre el archivo src/main/resources/application.properties o application.yml y ajusta las credenciales de conexión a tu base de datos MySQL.
+Abre el archivo `src/main/resources/application.properties` y ajusta las credenciales de conexión a tu base de datos MySQL.
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/gestion_notas
@@ -61,7 +61,7 @@ Dentro de la carpeta backend, ejecuta los siguientes comandos para descargar las
 mvn clean install
 mvn spring-boot:run
 ```
-El servidor backend debería estar disponible en [(http://localhost:8080)].
+El servidor backend debería estar disponible en http://localhost:8080.
 
 ### Configuración del Frontend
 
@@ -79,7 +79,7 @@ npm install
 
 ### Configurar la API del backend:
 
-Si es necesario, ajusta la URL de la API del backend en el archivo src/config.js o en el archivo correspondiente donde configures el endpoint de la API:
+Si es necesario, ajusta la URL de la API del backend en el archivo `src/config.js` o en el archivo correspondiente donde configures el endpoint de la API:
 
 ```javascript
 const API_URL = 'http://localhost:8080/api'; // Ajusta la URL si es necesario
@@ -90,7 +90,7 @@ Después de instalar las dependencias, ejecuta el siguiente comando para arranca
 ```bash
 npm start
 ```
-El frontend estará disponible en [http://localhost:3000].
+El frontend estará disponible en http://localhost:3000.
 
 Ejecutar ambos servicios simultáneamente
 
@@ -102,7 +102,8 @@ El frontend se ejecutará en:
 
 El frontend está configurado para hacer peticiones al backend alojado en http://localhost:8080. Si todo está configurado correctamente, deberías poder usar la aplicación desde el frontend, conectándose al backend.
 
-> [!IMPORTANT] Notas adicionales
+> [!IMPORTANT]
+> # Notas adicionales
 >Si necesitas reiniciar la base de datos en algún momento, puedes volver a importar el archivo database_dump.sql en MySQL.
 >Asegúrate de que ambos servidores (frontend y backend) estén corriendo simultáneamente para poder acceder a la funcionalidad completa de la aplicación.
 >Puedes usar herramientas como Postman para probar los endpoints del backend.
