@@ -45,8 +45,6 @@ Importa el dump:
 mysql -u <usuario> -p gestion_notas < ruta/al/archivo/database_dump.sql
 ```
 
-### Configurar las credenciales de MySQL:
-
 Abre el archivo src/main/resources/application.properties o application.yml y ajusta las credenciales de conexión a tu base de datos MySQL.
 
 ```properties
@@ -55,14 +53,14 @@ spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contraseña
 ```
 
-Compilar y ejecutar el backend:
+### Compilar y ejecutar el backend:
 
 Dentro de la carpeta backend, ejecuta los siguientes comandos para descargar las dependencias y ejecutar la aplicación.
 
-    ```bash
-    mvn clean install
-    mvn spring-boot:run
-    ```
+```bash
+mvn clean install
+mvn spring-boot:run
+```
 
     El servidor backend debería estar disponible en http://localhost:8080.
 
