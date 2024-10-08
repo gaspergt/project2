@@ -20,7 +20,7 @@ Primero, clona el repositorio. Este contiene dos ramas: `backend` para el backen
 
 ```bash
 git clone <URL_DEL_REPOSITORIO>
-
+```
 
 ## Estructura del proyecto
 
