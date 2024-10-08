@@ -11,16 +11,6 @@ Asegúrate de tener instaladas las siguientes herramientas:
 - **Node.js + npm**: Para ejecutar el frontend de React.
 - **MySQL**: Para la base de datos.
 - **Maven**: Para manejar las dependencias del backend (ya viene integrado con Spring Boot).
-  
-## Instrucciones para levantar el proyecto
-
-### Clonar el repositorio
-
-Primero, clona el repositorio. Este contiene dos ramas: `backend` para el backend con Spring Boot y `frontend` para la parte de React.
-
-```bash
-git clone <URL_DEL_REPOSITORIO>
-```
 
 ## Estructura del proyecto
 
