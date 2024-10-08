@@ -61,8 +61,7 @@ Dentro de la carpeta backend, ejecuta los siguientes comandos para descargar las
 mvn clean install
 mvn spring-boot:run
 ```
-
-    El servidor backend debería estar disponible en http://localhost:8080.
+[El servidor backend debería estar disponible en http://localhost:8080](http://localhost:8080).
 
 Configuración del Frontend
 
